@@ -1,0 +1,46 @@
+#wrapper .wraper-content {
+  display: flex;
+}
+.wraper-content .sidebar {
+  width: 100%;
+  max-width: 100px;
+  padding: 20px;
+  height: 100vh;
+  position: -webkit-sticky;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border-right: 1px solid rgba(92, 100, 119, 0.75);
+}
+.wraper-content .sidebar .logo i {
+    font-size: 3rem;
+    color: #0a80ff;
+}
+.sidebar #route {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    margin-top: 20px;
+}
+.sidebar #route i {
+    font-size: 1.8rem;
+    margin-bottom: 26px;
+    padding: 15px;
+    color: rgb(155, 182, 218);
+    background-color: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.sidebar #route i:is(:hover) {
+    background-color: rgb(44, 58, 76);
+    color: rgb(155, 182, 218);
+}
+.sidebar #route i.active {
+    color: #0a80ff;
+}
+.sidebar #route i.active:is(:hover) {
+    background-color: rgb(44, 58, 76);
+    color: rgb(155, 182, 218);
+}

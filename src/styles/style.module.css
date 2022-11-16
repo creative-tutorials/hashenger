@@ -1,0 +1,64 @@
+#flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    /* width: 100%; */
+    flex-direction: column;
+}
+#left h2 {
+    font-size: 3rem;
+    color: #f6f3fa;
+}
+#left h4 {
+    font-size: 1.6rem;
+    color: #f6f3fa;
+    font-weight: 600;
+}
+#left p {
+    color: #6dafed;
+    font-weight: 500;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+#left p i {
+    margin-right: 10px;
+}
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+.right #login {
+    width: 400px;
+    background-color: #4979a7;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    /* text-align: center; */
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.right #login i {
+    margin-right: 10px;
+}
+.right #login:hover {
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+@media (prefers-color-scheme: light) {
+	#left h2 {
+		color: black
+	}
+}
+@media (prefers-color-scheme: dark) {
+	#left h2 {
+		color: #f6f3fa
+	}
+}

@@ -1,0 +1,32 @@
+:root {
+  --font: Poppins, "sans-serif";
+  --small: 1rem;
+  --medium: 1.4rem;
+  --large: 2rem;
+  /* --dark-theme: ; */
+  --light-theme: #def5e5;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+}
+body {
+  background-color: var(--light-theme);
+}
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: var(--light-theme);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: rgb(27, 36, 48);
+    background: linear-gradient(
+      79deg,
+      rgba(27, 36, 48, 1) 0%,
+      rgb(32, 43, 57) 100%
+    );
+  }
+}
