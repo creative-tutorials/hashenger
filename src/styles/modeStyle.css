@@ -1,46 +1,239 @@
 #wrapper .wraper-content {
   display: flex;
+  height: 100vh;
 }
 .wraper-content .sidebar {
   width: 100%;
   max-width: 100px;
   padding: 20px;
-  height: 100vh;
   position: -webkit-sticky;
-  text-align: center;
   position: sticky;
+  text-align: center;
   top: 0;
-  right: 0;
   background-color: transparent;
   border-right: 1px solid rgba(92, 100, 119, 0.75);
 }
 .wraper-content .sidebar .logo i {
-    font-size: 3rem;
-    color: #0a80ff;
+  font-size: 2rem;
+  color: #0a80ff;
 }
 .sidebar #route {
-    display: flex;
-    /* align-items: center; */
-    flex-direction: column;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 }
 .sidebar #route i {
-    font-size: 1.8rem;
-    margin-bottom: 26px;
-    padding: 15px;
-    color: rgb(155, 182, 218);
-    background-color: transparent;
-    border-radius: 8px;
-    cursor: pointer;
+  font-size: 1.3rem;
+  margin-bottom: 26px;
+  padding: 15px;
+  color: rgb(155, 182, 218);
+  background-color: transparent;
+  border-radius: 8px;
+  cursor: pointer;
 }
 .sidebar #route i:is(:hover) {
-    background-color: rgb(44, 58, 76);
-    color: rgb(155, 182, 218);
+  background-color: rgb(44, 58, 76);
+  color: rgb(155, 182, 218);
 }
 .sidebar #route i.active {
-    color: #0a80ff;
+  color: #0a80ff;
 }
 .sidebar #route i.active:is(:hover) {
-    background-color: rgb(44, 58, 76);
-    color: rgb(155, 182, 218);
+  background-color: rgb(44, 58, 76);
+  color: rgb(155, 182, 218);
+}
+
+.sidebar-2 {
+  width: 100%;
+  max-width: 350px;
+  padding: 20px;
+  background-color: transparent;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  border-right: 1px solid rgba(92, 100, 119, 0.75);
+}
+.sidebar-2 .sideHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebar-2 .sideHeader h2 {
+  font-weight: 600;
+  color: rgb(217, 228, 242);
+}
+.sidebar-2 .sideHeader .cta i {
+  border: 1px solid rgba(92, 100, 119, 0.75);
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-size: 1.3rem;
+  color: rgb(202, 216, 234);
+}
+.sidebar-2 .sideHeader .cta i:hover {
+  background-color: rgb(44, 58, 76);
+  cursor: pointer;
+}
+.sidebar-2 .sideHeader .cta {
+  position: relative;
+}
+.sidebar-2 .sideHeader .cta #spotlight {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 100px;
+  padding: 8px;
+  font-size: 0.8rem;
+  background-color: rgb(94, 107, 124);
+  color: rgb(238, 238, 238);
+  font-weight: 500;
+  border-radius: 3px;
+  opacity: 0;
+  pointer-events: none;
+  text-align: center;
+  -webkit-transition: opacity 0.3s 0s linear;
+  -moz-transition: opacity 0.3s 0s linear;
+  -o-transition: opacity 0.3s 0s linear;
+  transition: opacity 0.3s 0s linear;
+}
+
+.sidebar-2 .sideHeader .cta:is(:hover, :active) #spotlight {
+  opacity: 1;
+}
+.searchInput {
+  margin-top: 49px;
+}
+.searchInput input {
+  width: 100%;
+  height: 45px;
+  background-color: transparent;
+  border: 1px solid rgba(92, 100, 119, 0.75);
+  outline: none;
+  padding-left: 28px;
+  color: rgb(202, 216, 234);
+  border-radius: 3px;
+}
+.searchInput input::placeholder {
+  color: rgb(94, 107, 124);
+}
+.searchInput input:is(:active, :focus) {
+  border-color: #0a80ff;
+  box-shadow: 0 0 1px #0a80ff;
+}
+.chat_list {
+  width: 100%;
+  margin-top: 40px;
+}
+.chat_list .profile {
+  display: flex;
+  /* align-items: center; */
+  padding: 15px;
+  margin: 15px 0 0 0;
+  background-color: rgb(44, 58, 76);
+  border-radius: 5px;
+  /* border-bottom: 2px solid rgba(92, 100, 119, 0.75); */
+}
+.chat_list .profile img {
+  border-radius: 50%;
+}
+.chat_list .profile h3 {
+  margin-left: 15px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: rgb(217, 228, 242);
+}
+.chat_m3 {
+  width: 100%;
+}
+.chat_m3 header {
+  width: 100%;
+  padding: 20px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(92, 100, 119, 0.75);
+  padding-left: 30px;
+  display: flex;
+}
+.chat_m3 header h3 {
+  font-weight: 600;
+  color: rgb(217, 228, 242);
+  margin-left: 15px;
+}
+.chat_m3 #m3_m4 {
+  padding: 25px;
+}
+.chat_m3 #m3_m4 .usr {
+  display: flex;
+}
+.chat_m3 #m3_m4 .usr img {
+  border-radius: 50%;
+}
+
+.chat_m3 #m3_m4 .usr h3 {
+  font-weight: 600;
+  margin-left: 12px;
+  color: rgb(217, 228, 242);
+}
+.chat_m3 #m3_m4 .usr #details #time {
+  color: rgb(143, 143, 143);
+  font-style: italic;
+  margin-left: 20px;
+}
+.chat_m3 #m3_m4 #m4_msg {
+  padding: 10px 20px;
+  background-color: rgba(71, 78, 92, 0.75);
+  color: rgb(221, 228, 238);
+  width: 200px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.chat_m3 {
+  position: relative;
+}
+footer {
+  position: absolute;
+  padding: 15px;
+  border-top: 1px solid rgba(92, 100, 119, 0.75);
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#footer-input-wrapper {
+  width: 100%;
+}
+footer #footer-input-wrapper input {
+  width: 100%;
+  height: 40px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1px solid rgba(92, 100, 119, 0.75);
+  outline: none;
+  color: rgb(202, 216, 234);
+  border-radius: 3px;
+}
+footer #footer-input-wrapper input::placeholder {
+  color: rgb(94, 107, 124);
+}
+footer #footer-input-wrapper input:is(:active, :focus) {
+  border-color: #0a80ff;
+  box-shadow: 0 0 1px #0a80ff;
+}
+footer #footer-cta {
+    display: flex;
+}
+footer #footer-cta i {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: rgb(202, 216, 234);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+footer #footer-cta i:nth-child(1) {
+    border: 1px solid rgb(94, 107, 124);
+}
+footer #footer-cta i:nth-child(2) {
+    background: #0a80ff;
+    color: #fff;
 }

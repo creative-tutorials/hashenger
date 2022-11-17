@@ -4,7 +4,8 @@ import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
 const ChatPage = lazy(() => import("./pages/ChatPage"));
-const Account = lazy(() => import("./pages/account"));
+const Register = lazy(() => import("./pages/register"));
+const Login = lazy(() => import("./pages/login"));
 const Profile = lazy(() => import("./pages/profile"));
 const FriendsRequest = lazy(() => import("./pages/friends"));
 const AdminControl = lazy(() => import("./pages/admin"));
@@ -18,15 +19,16 @@ function App() {
               <Route path="/" element={<ChatPage />}></Route>
             </Route>
             <Route element={<ProtectedRoute />}>
-              <Route path="/profile" element={<Profile />}></Route>
+              <Route path="profile" element={<Profile />}></Route>
             </Route>
             <Route element={<ProtectedRoute />}>
-              <Route path="/friends" element={<FriendsRequest />}></Route>
+              <Route path="friends" element={<FriendsRequest />}></Route>
             </Route>
             <Route element={<ProtectedRoute />}>
-              <Route path="/admin" element={<AdminControl />}></Route>
+              <Route path="admin" element={<AdminControl />}></Route>
             </Route>
-            <Route path="account" element={<Account />}></Route>
+            <Route path="register" element={<Register />}></Route>
+            <Route path="login" element={<Login />}></Route>
           </Routes>
         </Suspense>
       </Router>

@@ -1,64 +1,134 @@
-#flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    text-align: center;
-    /* width: 100%; */
-    flex-direction: column;
+.registerWrapper {
+  display: flex;
+  /* width: 100%; */
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
-#left h2 {
-    font-size: 3rem;
-    color: #f6f3fa;
+#registerContent {
+  width: 420px;
+  background-color: rgba(45, 54, 74, 0.75);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 8px 25px -70px rgba(0, 0, 0, 0.1);
 }
-#left h4 {
-    font-size: 1.6rem;
-    color: #f6f3fa;
-    font-weight: 600;
+#registerContent #regisHeader h1 {
+  color: rgb(202, 216, 234);
 }
-#left p {
-    color: #6dafed;
-    font-weight: 500;
-    border-radius: 10px;
-    margin-top: 10px;
+#registerContent p:nth-child(2) {
+  color: rgb(202, 216, 234);
+  font-weight: 500;
 }
-#left p i {
-    margin-right: 10px;
+#registerContent #form {
+  width: 100%;
+  margin-top: 30px;
 }
-.right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    width: 100%;
+#registerContent #form #input_field {
+  width: 100%;
 }
-.right #login {
-    width: 400px;
-    background-color: #4979a7;
-    color: #fff;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
-    /* text-align: center; */
-    border-radius: 10px;
-    font-size: 1.2rem;
-    cursor: pointer;
+#registerContent #form #input_field {
+    margin-top: 15px;
 }
-.right #login i {
-    margin-right: 10px;
+#registerContent #form #input_field input {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: transparent;
+  border: 2px solid rgba(92, 100, 119, 0.75);
+  outline: none;
+  color: rgb(202, 216, 234);
+  border-radius: 3px;
 }
-.right #login:hover {
-    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+#registerContent #form #input_field input::placeholder {
+  color: rgb(94, 107, 124);
+}
+#registerContent #form #input_field input:is(:active, :focus) {
+  border-color: #0a80ff;
+  box-shadow: 0 0 1px #0a80ff;
+}
+#registerContent #form #input_field {
+    position: relative;
+}
+#registerContent #form #input_field i {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  color: rgb(202, 216, 234);
+  cursor: pointer;
+}
+#registerContent
+  #form
+  #input_field:nth-child(2)
+  input:is(:focus)
+  ~ #action_button
+  i {
+  color: #0a80ff;
+}
+#button {
+  margin-top: 15px;
+}
+#button button {
+  width: 100%;
+  height: 55px;
+  outline: none;
+  border: none;
+  background-color: #0765ca;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#button button:hover {
+  background-color: #156dcb;
+}
+
+#bottom_footer {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 500;
+}
+#bottom_footer p {
+  color: #fff;
+}
+#bottom_footer a {
+  color: #156dcb;
+  text-decoration: none;
+}
+#bottom_footer a:hover {
+  text-decoration: underline;
 }
 @media (prefers-color-scheme: light) {
-	#left h2 {
-		color: black
-	}
-}
-@media (prefers-color-scheme: dark) {
-	#left h2 {
-		color: #f6f3fa
-	}
+  #registerContent {
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 25px -70px rgba(0, 0, 0, 0.1);
+  }
+  #registerContent #regisHeader h1 {
+    color: rgb(14, 86, 180);
+  }
+  #registerContent p:nth-child(2) {
+    color: rgb(19, 30, 45);
+    font-weight: 500;
+  }
+  #registerContent #form #input_field input:is(:active, :focus) {
+    border: 2px solid #215791;
+    box-shadow: 0 0 1px #215791;
+  }
+  #registerContent #form #input_field input {
+    color: black;
+  }
+  #registerContent #form #input_field input::placeholder {
+    color: black;
+  }
+  #registerContent #form #input_field:nth-child(2) i {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: rgb(161, 165, 172);
+    cursor: pointer;
+  }
+  #bottom_footer p {
+    color: rgb(0, 0, 0);
+  }
 }

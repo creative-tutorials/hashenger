@@ -1,5 +1,5 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import "../styles/modeStyle.css"
+import "../styles/modeStyle.css";
 function ChatPage() {
   return (
     <div id="wrapper">
@@ -19,6 +19,7 @@ function ChatPage() {
             <h2>Chats</h2>
             <div className="cta">
               <i className="fa-regular fa-circle-plus"></i>
+              <div id="spotlight">Create Chat</div>
             </div>
           </div>
           <div className="searchInput">
@@ -52,17 +53,29 @@ function ChatPage() {
             <div className="usr">
               <LazyLoadImage
                 alt="profile image"
-                width={45}
-                height={45}
+                width={35}
+                height={35}
                 src={"vite.svg"}
                 effect="blur"
               />
-              <h3>Vite Team</h3>
+              <div id="details">
+                <h3 id="sender">Vite Team</h3>
+                <p id="time">1:31PM</p>
+              </div>
             </div>
             <div id="m4_msg">
               <p>Hello There!</p>
             </div>
           </div>
+          <footer>
+            <div id="footer-input-wrapper">
+              <input type="text" id="send-message" />
+            </div>
+            <div id="footer-cta">
+              <i className="fa-solid fa-paperclip"></i>
+              <i className="fa-solid fa-paper-plane-top"></i>
+            </div>
+          </footer>
         </div>
       </div>
     </div>
