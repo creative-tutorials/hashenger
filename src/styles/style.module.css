@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  position: relative;
 }
 #registerContent {
   width: 420px;
@@ -27,7 +28,7 @@
   width: 100%;
 }
 #registerContent #form #input_field {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 #registerContent #form #input_field input {
   width: 100%;
@@ -46,7 +47,7 @@
   box-shadow: 0 0 1px #0a80ff;
 }
 #registerContent #form #input_field {
-    position: relative;
+  position: relative;
 }
 #registerContent #form #input_field i {
   position: absolute;
@@ -91,10 +92,56 @@
   color: #fff;
 }
 #bottom_footer a {
-  color: #156dcb;
+  color: #0a80ff;
   text-decoration: none;
 }
 #bottom_footer a:hover {
+  text-decoration: underline;
+}
+.Error {
+  transition: 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  position: absolute;
+  right: 20px;
+  opacity: 1;
+  pointer-events: auto;
+  width: 300px;
+  bottom: 20px;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: rgb(38, 55, 80);
+  color: rgb(198, 222, 254);
+  border-left: 3px solid rgb(225, 33, 33);
+}
+.Hidden {
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  width: 300px;
+  bottom: 20px;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: rgb(38, 55, 80);
+  color: rgb(198, 222, 254);
+  border-left: 3px solid rgb(232, 77, 77);
+  transition: 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+#recovery,
+#forgot {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+#recovery a,
+#forgot a {
+  text-decoration: none;
+  color: #0a80ff;
+}
+#recovery a:hover,
+#forgot a:hover {
   text-decoration: underline;
 }
 @media (prefers-color-scheme: light) {
