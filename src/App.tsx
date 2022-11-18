@@ -7,6 +7,8 @@ const ChatPage = lazy(() => import("./pages/ChatPage"));
 const Register = lazy(() => import("./pages/register"));
 const Login = lazy(() => import("./pages/login"));
 const Profile = lazy(() => import("./pages/profile"));
+const TokenPage = lazy(() => import("./pages/token_generate"));
+const NotFound = lazy(() => import("./pages/404"));
 const FriendsRequest = lazy(() => import("./pages/friends"));
 const AdminControl = lazy(() => import("./pages/admin"));
 function App() {
@@ -27,8 +29,12 @@ function App() {
             <Route element={<ProtectedRoute />}>
               <Route path="admin" element={<AdminControl />}></Route>
             </Route>
+            <Route element={<ProtectedRoute />}>
+              <Route path="token/generate" element={<TokenPage />}></Route>
+            </Route>
             <Route path="register" element={<Register />}></Route>
             <Route path="login" element={<Login />}></Route>
+            <Route path="*" element={<NotFound />}></Route>
           </Routes>
         </Suspense>
       </Router>
