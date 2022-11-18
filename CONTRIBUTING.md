@@ -10,7 +10,7 @@ We love your commitment towards making a change to this Open-Source Community. B
 - [Deployment](#deployment)
 - [Setup](#setup)
 - [Pull Request](#pull-request)
-- [Remarks]()
+- [Remarks](#remarks)
 
 ## Issues
 
