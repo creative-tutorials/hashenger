@@ -3,18 +3,18 @@
 We love your commitment towards making a change to this Open-Source Community. But as you know there are some guidelines you must follow to keep this community safe and secure.
 
 - [Code Of Conduct](CODE_OF_CONDUCT.md)
-- [Issues]()
-- [Requirements]()
-- [Tools we use]()
-- [Privacy]()
-- [Deployment]()
-- [Setup]()
-- [Pull Requests]()
+- [Issues](#issues)
+- [Requirements](#requirements)
+- [Tools we use](#tools-we-use)
+- [Privacy](#privacy)
+- [Deployment](#deployment)
+- [Setup](#setup)
+- [Pull Request](#pull-request)
 - [Remarks]()
 
 ## Issues
 
-- Before contributing to this repo, ensure that your change(s) should meetup or follow the issues listed on this repo.
+- Before contributing to this repo, ensure that your change(s) should meetup or follow the [issues](https://github.com/creative-tutorials/hashenger/issues/new/choose) listed on this repo.
 - **DO NOT** Create duplicate issues. Check and confirm that the issue you want to add does not already exist on this platofrm.
 - Ensure your Pull Request is linked to the issue you want to contribute to/on.
 
@@ -109,3 +109,6 @@ git merge upstream/master
 * If fixing a bug:
 
 * The name of your PR should be a summary of the changes you are making. (For example fix: fix non-responsive navbar, feat: add prettier for code formatting) Provide a detailed description of the bug in the PR. Screenshots are nice.
+
+## Remarks
+If you feel like there's something missing in this document or it isn't comprehensive enough, then feel free to make a PR directly or [create an issue](https://github.com/creative-tutorials/hashenger/issues/new/choose) to improve it. Thank You.
