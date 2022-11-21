@@ -125,12 +125,11 @@
 }
 .chat_list .profile {
   display: flex;
-  /* align-items: center; */
   padding: 15px;
   margin: 15px 0 0 0;
-  background-color: rgb(44, 58, 76);
+  background-color: rgb(38 46 57);
   border-radius: 5px;
-  /* border-bottom: 2px solid rgba(92, 100, 119, 0.75); */
+  box-shadow: 0 0.1rem 0 0 rgb(0 0 0 / 10%);
 }
 .chat_list .profile img {
   border-radius: 50%;
@@ -172,14 +171,21 @@
   margin-left: 12px;
   color: rgb(217, 228, 242);
 }
-.chat_m3 #m3_m4 .usr #details #time {
+.chat_m3 #time {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 0.8rem;
   color: rgb(143, 143, 143);
   font-style: italic;
   margin-left: 20px;
 }
+#group_m4 {
+  width: 200px;
+}
 .chat_m3 #m3_m4 #m4_msg {
   padding: 10px 20px;
-  background-color: rgba(71, 78, 92, 0.75);
+  background-color: rgba(48, 55, 69, 0.749);
   color: rgb(221, 228, 238);
   width: 200px;
   border-radius: 8px;

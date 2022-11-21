@@ -58,7 +58,7 @@
 }
 #registerContent
   #form
-  #input_field:nth-child(2)
+  #input_field
   input:is(:focus)
   ~ #action_button
   i {
@@ -146,7 +146,7 @@
 }
 @media (prefers-color-scheme: light) {
   #registerContent {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(245 245 245);
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0px 8px 25px -70px rgba(0, 0, 0, 0.1);
@@ -159,8 +159,8 @@
     font-weight: 500;
   }
   #registerContent #form #input_field input:is(:active, :focus) {
-    border: 2px solid #215791;
-    box-shadow: 0 0 1px #215791;
+    border: 2px solid rgb(43, 122, 206);
+    box-shadow: 0 0 1px rgb(43, 122, 206);
   }
   #registerContent #form #input_field input {
     color: black;
@@ -168,11 +168,11 @@
   #registerContent #form #input_field input::placeholder {
     color: black;
   }
-  #registerContent #form #input_field:nth-child(2) i {
+  #registerContent #form #input_field i {
     position: absolute;
     right: 20px;
     top: 15px;
-    color: rgb(161, 165, 172);
+    color: rgb(57, 64, 75);
     cursor: pointer;
   }
   #bottom_footer p {
