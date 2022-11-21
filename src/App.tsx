@@ -3,7 +3,7 @@ import Loader from "./Loader";
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
-const ChatPage = lazy(() => import("./pages/ChatPage"));
+const ChatPage = lazy(() => import("./pages/chat"));
 const Register = lazy(() => import("./pages/register"));
 const Login = lazy(() => import("./pages/login"));
 const Profile = lazy(() => import("./pages/profile"));
