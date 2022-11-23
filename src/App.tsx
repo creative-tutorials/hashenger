@@ -3,11 +3,12 @@ import Loader from "./Loader";
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
+import ProtectRoute_ from './Protected-Route';
 const ChatPage = lazy(() => import("./pages/chat"));
 const Register = lazy(() => import("./pages/register"));
 const Login = lazy(() => import("./pages/login"));
 const Profile = lazy(() => import("./pages/profile"));
-const TokenPage = lazy(() => import("./pages/token_generate"));
+const ChatID_Create = lazy(() => import("./pages/id_generate"));
 const NotFound = lazy(() => import("./pages/404"));
 const FriendsRequest = lazy(() => import("./pages/friends"));
 const AdminControl = lazy(() => import("./pages/admin"));
@@ -19,21 +20,15 @@ function App() {
           <Routes>
             <Route element={<ProtectedRoute />}>
               <Route path="/" element={<ChatPage />}></Route>
-            </Route>
-            <Route element={<ProtectedRoute />}>
               <Route path="profile" element={<Profile />}></Route>
-            </Route>
-            <Route element={<ProtectedRoute />}>
               <Route path="friends" element={<FriendsRequest />}></Route>
-            </Route>
-            <Route element={<ProtectedRoute />}>
               <Route path="admin" element={<AdminControl />}></Route>
+              <Route path="id/generate" element={<ChatID_Create />}></Route>
             </Route>
-            <Route element={<ProtectedRoute />}>
-              <Route path="token/generate" element={<TokenPage />}></Route>
+            <Route element={<ProtectRoute_ />}>
+              <Route path="register" element={<Register />}></Route>
+              <Route path="login" element={<Login />}></Route>
             </Route>
-            <Route path="register" element={<Register />}></Route>
-            <Route path="login" element={<Login />}></Route>
             <Route path="*" element={<NotFound />}></Route>
           </Routes>
         </Suspense>
