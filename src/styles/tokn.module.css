@@ -18,22 +18,29 @@
   color: rgb(202, 216, 234);
 }
 #tkn_fild {
-  margin-top: 25px;
-  display: flex;
+  margin-top: 10px;
+  position: relative;
 }
 #tkn_fild input {
   width: 100%;
   padding: 10px 15px;
+  margin-top: 15px;
   background-color: transparent;
   border: 2px solid rgba(92, 100, 119, 0.75);
   outline: none;
   color: rgb(202, 216, 234);
   border-radius: 3px;
 }
+#tkn_fild i {
+  position: absolute;
+  right: 20px;
+  top: 28px;
+  color: rgba(202, 209, 224, 0.75);
+  cursor: pointer;
+}
 #generateBtn button {
-  width: 180px;
-  margin-left: 10px;
-  /* height: 60px; */
+  width: 100%;
+  margin-top: 15px;
   padding: 13px 15px;
   outline: none;
   border: none;

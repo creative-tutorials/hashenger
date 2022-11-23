@@ -1,8 +1,6 @@
 import { Toast } from "../components/Toast/toast";
-import LazyLoad from "react-lazy-load";
 import style from "../styles/style.module.css";
 import { Link } from "react-router-dom";
-import { AuthenticateUser } from "../function/AuthenticateUser";
 import FormComponent from "../components/forms/register_form";
 import { useRef, useState } from "react";
 function Register() {

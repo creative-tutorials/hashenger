@@ -157,19 +157,15 @@
   margin-left: 15px;
 }
 .chat_m3 #m3_m4 {
+  height: 100%;
+  max-height: 500px;
+  /* min-height: 200px; */
+  overflow: auto;
+  /* background-color: red; */
   padding: 25px;
 }
-.chat_m3 #m3_m4 .usr {
-  display: flex;
-}
-.chat_m3 #m3_m4 .usr img {
-  border-radius: 50%;
-}
-
-.chat_m3 #m3_m4 .usr h3 {
-  font-weight: 600;
-  margin-left: 12px;
-  color: rgb(217, 228, 242);
+.chat_m3 #m3_m4::-webkit-scrollbar {
+  visibility: hidden;
 }
 .chat_m3 #time {
   display: flex;
@@ -179,6 +175,15 @@
   color: rgb(143, 143, 143);
   font-style: italic;
   margin-left: 20px;
+}
+.chat_m3 #user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.8rem;
+  color: rgb(143, 143, 143);
+  font-style: italic;
+  margin-top: -10px;
 }
 #group_m4 {
   width: 200px;
@@ -224,22 +229,175 @@ footer #footer-input-wrapper input:is(:active, :focus) {
   box-shadow: 0 0 1px #0a80ff;
 }
 footer #footer-cta {
-    display: flex;
+  display: flex;
 }
 footer #footer-cta i {
-    padding: 10px 20px;
-    background-color: transparent;
-    color: rgb(202, 216, 234);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    margin-left: 10px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: rgb(202, 216, 234);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  margin-left: 10px;
 }
 footer #footer-cta i:nth-child(1) {
-    border: 1px solid rgb(94, 107, 124);
+  border: 1px solid rgb(94, 107, 124);
 }
 footer #footer-cta i:nth-child(2) {
-    background: #0a80ff;
+  background: #0a80ff;
+  color: #fff;
+  cursor: pointer;
+}
+.invite-box {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(94, 107, 124, 0.411);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.invite-box.active {
+  display: flex;
+}
+#inv-box {
+  padding: 20px;
+  background-color: rgb(41, 45, 56);
+  display: flex;
+  border-radius: 8px;
+}
+#input {
+  position: relative;
+}
+#input i {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+  color: rgb(193, 204, 224);
+  cursor: pointer;
+}
+.invite-box input {
+  width: 500px;
+  padding: 15px 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid rgb(193, 204, 224);
+  color: rgb(193, 204, 224);
+}
+.invite-box input::placeholder {
+  color: rgb(193, 204, 224);
+}
+#invite-btn {
+  padding: 15px 25px;
+  background-color: rgb(84, 99, 120);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: 1rem;
+  color: rgb(238, 243, 251);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+#invite-btn:hover {
+  background-color: rgb(63, 74, 89)
+}
+@media (prefers-color-scheme: light) {
+  footer #footer-cta i:nth-child(2) {
+    background: #0b67ca;
     color: #fff;
+    cursor: pointer;
+  }
+  footer #footer-cta i:nth-child(1) {
+    border: 1px solid rgb(37, 43, 52);
+  }
+  footer #footer-cta i {
+    color: rgb(37, 43, 52);
+  }
+  footer #footer-input-wrapper input:is(:active, :focus) {
+    border-color: #0b67ca;
+    box-shadow: 0 0 1px #0b67ca;
+  }
+  .chat_list .profile {
+    background-color: rgb(201, 207, 215);
+  }
+  .searchInput input:is(:active, :focus) {
+    border-color: #0b67ca;
+    box-shadow: 0 0 1px #0b67ca;
+  }
+  .chat_m3 header {
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(213, 219, 234, 0.75);
+    padding-left: 30px;
+    display: flex;
+}
+  .chat_m3 header h3 {
+    font-weight: 600;
+    color: rgb(37, 43, 52);
+    margin-left: 15px;
+  }
+  .chat_list .profile h3 {
+    color: rgb(37, 43, 52);
+  }
+  .chat_m3 #m3_m4 #m4_msg {
+    background-color: rgb(201, 207, 215);
+    color: rgb(37, 43, 52);
+  }
+  .chat_m3 #time {
+    color: rgb(37, 43, 52);
+  }
+  .chat_m3 #user {
+    color: rgb(37, 43, 52);
+    font-weight: 500;
+  }
+  .sidebar-2 {
+    border-right: 1px solid rgba(213, 219, 234, 0.75);
+  }
+  .wraper-content .sidebar {
+    background-color: transparent;
+    border-right: 1px solid rgba(213, 219, 234, 0.75);
+  }
+  .sidebar-2 .sideHeader .cta i {
+    border: 1px solid rgb(37, 43, 52);
+    color: rgb(37, 43, 52);
+  }
+  .sidebar-2 .sideHeader .cta i:hover {
+    background-color: rgba(213, 219, 234, 0.75);
+    border-color: rgba(213, 219, 234, 0.75);
+    cursor: pointer;
+  }
+  .sidebar-2 .sideHeader .cta #spotlight {
+    background-color: rgba(213, 219, 234, 0.75);
+    color: rgb(37, 43, 52);
+  }
+  .sidebar-2 .sideHeader h2 {
+    font-weight: 600;
+    color: rgb(37, 43, 52);
+  }
+  .sidebar #route i {
+    font-size: 1.3rem;
+    margin-bottom: 26px;
+    padding: 15px;
+    color: rgb(37, 43, 52);
+    background-color: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .sidebar #route i:is(:hover) {
+    background-color: rgb(175, 188, 206);
+    color: #fff;
+  }
+  /* .sidebar #route i.active {
+    color: #0a80ff;
+  } */
+  .sidebar #route i.active:is(:hover) {
+    background-color: rgb(175, 188, 206);
+    color: #fff;
+  }
 }

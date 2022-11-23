@@ -1,9 +1,7 @@
 import { Toast } from "../components/Toast/toast";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import LazyLoad from "react-lazy-load";
 import style from "../styles/style.module.css";
-import { AuthenticateUser } from "../function/AuthenticateUser";
 import FormComponent from "../components/forms/login_form";
 function Login() {
   const password_: any = useRef();

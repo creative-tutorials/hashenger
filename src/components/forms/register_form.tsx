@@ -33,6 +33,14 @@ export default function FormComponent({
       if (response.ok) {
         const result = await response.json();
         console.log(result);
+        localStorage.setItem(
+          "session.auth",
+          JSON.stringify({
+            username: getUsernameFieldValue,
+            email: getEmailFieldValue,
+            password: getPswrdFieldValue,
+          })
+        );
         setisActive(true);
         setTimeout(() => {
           setisActive(false);
@@ -42,14 +50,6 @@ export default function FormComponent({
       if (!response.ok) {
         const result = await response.json();
         setisActive(true);
-        localStorage.setItem(
-          "session.auth",
-          JSON.stringify({
-            username: getUsernameFieldValue,
-            email: getEmailFieldValue,
-            password: getPswrdFieldValue,
-          })
-        );
         setTimeout(() => {
           setisActive(false);
         }, 5000);
