@@ -1,7 +1,7 @@
 import "./App.css";
 import Loader from "./Loader";
-import React, { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
 import ProtectRoute_ from './Protected-Route';
 const ChatPage = lazy(() => import("./pages/chat"));
