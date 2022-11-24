@@ -1,4 +1,9 @@
+import './styles/css_loader.css';
 function Loader() {
-    return <h1>Loading...</h1>
+  return (
+    <div className="loader-wrapper">
+      <div className="custom-loader"></div>
+    </div>
+  );
 }
 export default Loader;
