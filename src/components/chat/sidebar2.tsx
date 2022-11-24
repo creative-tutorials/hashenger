@@ -1,22 +1,8 @@
 import React from "react";
 import { useRef } from "react";
+import { SearchText } from "../../function/SearchText";
 export function Sidebar2({ LazyLoadImage, setshowInviteBox }: any) {
   const search_input: any = useRef();
-  const SearchText = function () {
-    // console.log('hello')
-    const input = search_input.current.value;
-    const filter = input.toLowerCase();
-    // console.log(filter);
-    const grp: any = document.querySelectorAll("#group_m4");
-    for (let i = 0; i < grp.length; i++) {
-      const element = grp[i];
-      if (element.innerText.toLowerCase().includes(filter)) {
-        element.style.display = "block";
-      } else {
-        element.style.display = "none";
-      }
-    }
-  };
   return (
     <div className="sidebar-2">
       <div className="sideHeader">
@@ -35,7 +21,9 @@ export function Sidebar2({ LazyLoadImage, setshowInviteBox }: any) {
         <input
           type="text"
           placeholder="Search Chats"
-          onKeyUp={SearchText}
+          onKeyUp={() => {
+            SearchText(search_input);
+          }}
           ref={search_input}
         />
       </div>
